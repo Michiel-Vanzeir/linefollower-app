@@ -1,5 +1,4 @@
 // ignore_for_file: sized_box_for_whitespace
-
 import 'dart:async';
 import 'package:flutter/material.dart';
 
@@ -24,8 +23,8 @@ class _VideoStreamState extends State<VideoStream> {
   void updateURL(Timer timer) {
     setState(() {
       imageCache?.clear();
+      url = "http://192.168.1.26:8080/video_stream?ignore=$counter";
       counter++;
-      url = "http://192.168.1.26:8080/video_stream?x=$counter";
     });
   }
 
